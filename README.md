@@ -7,5 +7,6 @@ GPU：NVIDIA GeForce GTX 1080/2080 Ti
 
 ## ToDo
 
-- [Deep Learning用計算機のセットアップ](./dl_computer_setup.md)
+- [Deep Learning用計算機のセットアップ](./nvidia_setup.md)
 - [Python仮想環境構築](./miniconda_setup.md)
+- [[任意] リモートデスクトップの設定](./xrdp_setup.md)

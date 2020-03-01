@@ -10,16 +10,14 @@ Ubuntu OS搭載の計算機にDeep Learning環境を構築する方法を記載�
     2. [NVIDIA Driverのインストール](#12-nvidia-driverのインストール)
 
 2. [CUDAのセットアップ](#2-cudaのセットアップ)
+
     1. [CUDAのダウンロード](#21-cudaのダウンロード)
     2. [CUDA Toolkitのインストール](#22-cuda-toolkitのインストール)
     3. [pathの設定](#23-pathの設定)
+
 3. [cuDNNのセットアップ](#3-cudnnのセットアップ)
     1. [cuDNNのダウンロード](#31-cudnnのダウンロード)
     2. [cuDNNのインストール](#32-cudnnのインストール)
-4. [リモートデスクトップのセットアップ](#4-リモートデスクトップのセットアップ)
-    1. [xrdpのインストール](#41-xrdpのインストール)
-    2. [xrdpの設定](#42-xrdpの設定)
-    3. [xrdpのキー配列日本語化](#43-xrdpのキー配列日本語化)
 
 ## 1　NVIDIA Driverのセットアップ
 
@@ -143,53 +141,4 @@ Ubuntu OS搭載の計算機にDeep Learning環境を構築する方法を記載�
 ```bash
 $ sudo dpkg -i /home/user/Downloads/<cuDNN Runtime Library for Ubuntu16.04 (Deb)のファイル名>
 $ sudo dpkg -i /home/user/Downloads/<cuDNN Developer Library for Ubuntu16.04 (Deb)のファイル名>
-```
-
-## 4　リモートデスクトップのセットアップ
-
-### 4.1　xrdpのインストール
-
-端末を起動し，以下のコマンドを実行．
-
-```bash
-sudo apt install xrdp lxde   # xrdpのインストール
-```
-
-### 4.2　xrdpの設定
-
-1. 以下のコマンドを実行．
-
-    ```bash
-    $ echo lxsession -s LXDE -e LXDE > ~/.xsession   # よく分からん
-    ```
-
-2. 以下のコマンドを実行してファイルを編集する．
-
-    ```bash
-    $ sudo vi /etc/xrdp/xrdp.ini   # 該当ファイルを開く
-    ```
-
-    - `crypt_level`を`low`から`high`にする
-    - xrdp1セクションの`port=-1`を`ask=-1`にする
-
-    端末でのテキストの編集方法は[こちら](https://language-and-engineering.hatenablog.jp/entry/20121207/p1)
-    を参照のこと．
-
-3. 以下のコマンドを実行し，xrdpを起動．
-
-    ```bash
-    $ gsettings set org.gnome.Vino require-encryption false   # よく分からん
-    $ sudo service xrdp restart   # xrdpを起動
-    ```
-
-### 4.3　xrdpのキー配列日本語化
-
-以下のコマンドを順番に実行．
-
-```bash
-$ cd /etc/xrdp   # xrdpのディレクトリに移動
-$ cd /tmp; wget http://w.vmeta.jp/temp/km-0411.ini   # 日本語化に必要なやつをダウンロード
-$ sudo cp /tmp/km-0411.ini .   # よく分からん
-$ sudo ln -s km-0411.ini km-e0200411.ini   # よく分からん
-$ sudo ln -s km-0411.ini km-e0010411.ini   # よく分からん
 ```
