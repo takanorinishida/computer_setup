@@ -4,20 +4,20 @@ Ubuntu OS搭載の計算機にDeep Learning環境を構築する方法を記載�
 
 ## 目次
 
-1. [NVIDIA Driverのセットアップ](#1-nvidia-driverのセットアップ)
+1. [NVIDIA Driverのセットアップ](#1nvidia-driverのセットアップ)
 
-    1. [NVIDIA Driverのダウンロード](#11-nvidia-driverのダウンロード)
-    2. [NVIDIA Driverのインストール](#12-nvidia-driverのインストール)
+    1. [NVIDIA Driverのダウンロード](#11nvidia-driverのダウンロード)
+    2. [NVIDIA Driverのインストール](#12nvidia-driverのインストール)
 
-2. [CUDAのセットアップ](#2-cudaのセットアップ)
+2. [CUDAのセットアップ](#2cudaのセットアップ)
 
-    1. [CUDAのダウンロード](#21-cudaのダウンロード)
-    2. [CUDA Toolkitのインストール](#22-cuda-toolkitのインストール)
-    3. [pathの設定](#23-pathの設定)
+    1. [CUDAのダウンロード](#21cudaのダウンロード)
+    2. [CUDA Toolkitのインストール](#22cuda-toolkitのインストール)
+    3. [pathの設定](#23pathの設定)
 
-3. [cuDNNのセットアップ](#3-cudnnのセットアップ)
-    1. [cuDNNのダウンロード](#31-cudnnのダウンロード)
-    2. [cuDNNのインストール](#32-cudnnのインストール)
+3. [cuDNNのセットアップ](#3cudnnのセットアップ)
+    1. [cuDNNのダウンロード](#31cudnnのダウンロード)
+    2. [cuDNNのインストール](#32cudnnのインストール)
 
 ## 1　NVIDIA Driverのセットアップ
 
@@ -87,7 +87,7 @@ Ubuntu OS搭載の計算機にDeep Learning環境を構築する方法を記載�
     - Version：`16.04`（最近の計算機は`18.04`かも，要確認）
     - Installer Type：`deb(local)`
 
-### 2.2 CUDA Toolkitのインストール
+### 2.2　CUDA Toolkitのインストール
 
 [2.1　CUDAのダウンロード](#21-cuda%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89)を行うと端末での操作手順が出てくるはず．その手順通りに端末でコマンドを実行する．
 
